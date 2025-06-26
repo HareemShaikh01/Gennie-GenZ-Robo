@@ -7,7 +7,14 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://gennie-gen-z-robo-a94g.vercel.app",
+    methods: ["POST"],
+    credentials: true,
+  })
+);
+
 
 const PORT = process.env.PORT || 3000;
 
