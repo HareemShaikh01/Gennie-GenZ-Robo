@@ -27,6 +27,10 @@ let sessionHistory = [
     },
 ];
 
+app.get('/', (req, res) => {
+    res.send('Welcome to Gennie\'s API! 🤖')        
+});
+
 // Endpoint
 app.post('/api/chat', async (req, res) => {
     try {
